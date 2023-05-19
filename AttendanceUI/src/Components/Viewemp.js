@@ -190,7 +190,7 @@ const paginatedResults = filteredResults.slice(indexOfFirstItem, indexOfLastItem
       <body  className="viewemp">
         <br />
         <div className="input-group">
-      <div className="form-outline" style={{marginTop:"-3.4%"}}>
+      <div className="form-outline">
         <input type="search" id="form1" className="form-control" value={searchString}
             onChange={(e) => setSearchString(e.target.value)} />
         <button type="button" className="search-button">

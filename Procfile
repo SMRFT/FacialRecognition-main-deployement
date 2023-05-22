@@ -1,0 +1,1 @@
+web: gunicorn Attendance_Management.wsgi:application --log-file - --log-level debug

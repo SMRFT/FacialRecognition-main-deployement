@@ -12,7 +12,8 @@ from AttendanceApp.Views.retrieveemp import RetrieveBreak
 from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import path
-
+from django.views.static import serve
+from django.conf.urls import url
 # from .views import send_email
 urlpatterns = [
 
@@ -52,6 +53,5 @@ urlpatterns = [
     path('upload/', upload_image, name='upload_image'),
     # path('message/', send_whatsapp, name='message')
 ]
-
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT})
+url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT})

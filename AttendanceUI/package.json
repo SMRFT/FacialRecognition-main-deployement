@@ -77,6 +77,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+   "scripts": {
+      "start": "node index.js"
+   },
   "eslintConfig": {
     "extends": [
       "react-app",
